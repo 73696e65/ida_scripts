@@ -22,7 +22,7 @@ process = Popen(command, stdin=f_mangled, stdout=f_demangled)
 process.communicate()
 f_mangled.close()
 
-# demangle entries in IDA and append the signature change comment
+# demangle entries in IDA and append the comment with the previous name
 f_demangled.flush()
 f_demangled.seek(0)
 for entry in f_demangled:
